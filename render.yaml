@@ -1,0 +1,21 @@
+# Render Blueprint for SirShaqBot_with_demo
+# Documentation: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: sirshaqbot-demo
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python scripts/generate_video.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
+      - key: CONFIG_PATH
+        value: config/api_keys.env
+
+# If you want to run other scripts (e.g., fetch_content.py, upload_video.py),
+# change the startCommand accordingly or add additional services/jobs.
+
+# For background jobs, you can add a 'type: worker' service.
+# For scheduled jobs, use Render's cron jobs feature.

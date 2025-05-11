@@ -1,0 +1,11 @@
+praw
+tweepy
+beautifulsoup4
+requests
+openai
+moviepy
+opencv-python
+google-api-python-client
+google-auth-oauthlib
+apache-airflow  # or prefect
+python-dotenv

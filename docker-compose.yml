@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  sirshaqbot:
+    build: .
+    environment:
+      - PRAW_CLIENT_ID
+      - PRAW_CLIENT_SECRET
+      - TWITTER_BEARER_TOKEN
+      - YOUTUBE_CLIENT_SECRET
+      - OPENAI_API_KEY
+      - PEXELS_API_KEY
+    volumes:
+      - ./data:/app/data
